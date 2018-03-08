@@ -3,20 +3,20 @@ warehouse record keeper (Warehouse Management System)
 
 In general requirements of a warehouse management system, functions for incoming and outgoing items/cargoes must be available as recorded transactions. These 2 functions will then be basis for actual inventory records and therefore shall have the following data recorded in a database:
 -Customer Details
-1. Customer Code
-2. Customer Name
-3. Address
-4. Contact Person
-5. Contact Number
-6. TIN Number
-7. Payment Terms
-8. Remarks
+1. Customer Code - customer-code INT(50) PK
+2. Customer Name - customer-name VARCHAR(50)
+3. Address - customer-address VARCHAR(150)
+4. Contact Person - customer-contactperson VARCHAR(50)
+5. Contact Number - customer-contactnumber VARCHAR(12)
+6. TIN Number - customer-tin VARCHAR(12)
+7. Payment Terms - customer-paymentterms INT(120)
+8. Remarks - customer-remarks VARCHAR(200)
 
 -Item Details
-1. Customer/Owner Code
-2. Item Code
-3. Item Description
-4. Remarks
+1. Customer/Owner Code - customer-code INT(50) FK
+2. Item Code - item-code VARCHAR(15) PK
+3. Item Description - item-description VARCHAR(150)
+4. Remarks - item-remarks VARCHAR(200)
 
 -Transaction Details
 1. Transaction ID
