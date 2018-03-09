@@ -19,24 +19,24 @@ In general requirements of a warehouse management system, functions for incoming
 4. Remarks - item-remarks VARCHAR(200)
 
 -Transaction Details
-1. Transaction ID
-2. Reference ID
-3. Incoming or Outgoing
-4. Receive Date
-5. Expected Date
-6. Delivery Date
-7. Order Date
-8. Item Quantity
-8. Item UOM
-10. Item Breakdown Qty. 1
-11. Item Breakdown UOM. 2
-12. Length
-13. Width
-14. Height
-15. Weight
-16. Manufacturing Date
-17. Expiry Date
-18. Limit Date
+1. Transaction ID - trans_id INT(12) PK
+2. Customer Reference - trans_customerreference VARCHAR(15)
+3. Incoming or Outgoing - trans_transactiontype ENUM ('outgoing', 'incoming', 'sortout')
+4. Receive Date - trans_receivedate DATETIME DEFAULT 0
+5. Expected Date - trans_expecteddate DATETIME NULL
+6. Delivery Date - trans_deliverydate DATETIME DEFAULT 0
+7. Order Date - trans_orderdate DATETIME DEFAULT 0
+8. Item Quantity - trans_itemqty DECIMAL(10,4)
+8. Item UOM - trans_itemuom ENUM('plt/s','rol/s','box/s','can/s','drm/s', 'ctn/s')
+10. Item Breakdown Qty.  - trans_breakdownqty DECIMAL(10,4)
+11. Item Breakdown UOM.  - trans_breakdownuom ENUM('plt/s','rol/s','box/s','can/s','drm/s', 'ctn/s')
+12. Length - trans_itemlength DECIMAL(10,4)
+13. Width - trans_itemwidth DECIMAL(10,4)
+14. Height - trans_itemheight DECIMAL(10,4)
+15. Weight - trans_itemweight DECIMAL(10,4)
+16. Manufacturing Date - trans_mfgdate DATETIME DEFAULT 0
+17. Expiry Date - trans_expdate DATETIME DEFAULT 0
+18. Limit Date - 
 19. Location ID/Name
 20. Remarks
 
